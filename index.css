@@ -1,0 +1,19 @@
+.gallery {
+  display: flex;
+  list-style: none;
+  padding: 5px;
+}
+
+.gallery li {
+  margin: 15px;
+}
+
+.gallery img {
+  width: 150px;
+  height: 80px;
+}
+.box {
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+}

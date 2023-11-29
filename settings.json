@@ -1,0 +1,13 @@
+"editor.tokenColorCustomizations": {
+    "textMateRules": [
+        {
+            "scope": [
+                "comment",
+                "comment.block.documentation"
+            ],
+            "settings": {
+                "foreground": "#000" // Колір вашого коментаря
+            }
+        }
+    ]
+}

@@ -1,5 +1,6 @@
 const getForLogin = document.querySelector(".login-form");
-getForLogin.addEventListener("submit", () => {
+getForLogin.addEventListener("submit", (event) => {
+  event.preventDefault();
   const emailInput = getForLogin.elements.email.value;
   const passwordInput = getForLogin.elements.password.value;
   const isValidInput = emailInput != "" && passwordInput != "";

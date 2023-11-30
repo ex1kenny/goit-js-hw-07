@@ -1,12 +1,12 @@
-const input = document.querySelector("#controls input");
-const createBtn = document.querySelector("[data-create]");
-const destroyBtn = document.querySelector("[data-destroy]");
+const inputControls = document.querySelector("#controls input");
+const createButton = document.querySelector("[data-create]");
+const destroyButton = document.querySelector("[data-destroy]");
 const boxesContainer = document.querySelector("#boxes");
 
 const getRandomHexColor = () =>
   `#${Math.floor(Math.random() * 16777215)
     .toString(16)
-    .padStart(6, 0)}`;
+    .padStart(6, "0")}`;
 
 const createDiv = (amount) => {
   for (let i = 0; i < amount; i++) {
@@ -25,15 +25,15 @@ const destroyDiv = () => {
   boxesContainer.innerHTML = "";
 };
 
-createBtn.addEventListener("click", () => {
-  const amount = parseInt(input.value);
+createButton.addEventListener("click", () => {
+  const amount = parseInt(inputControls.value);
 
   if (amount >= 1 && amount <= 100) {
     createDiv(amount);
-    input.value = "";
+    inputControls.value = "";
   } else {
     alert("Please enter a number between 1 and 100.");
   }
 });
 
-destroyBtn.addEventListener("click", destroyDiv);
+destroyButton.addEventListener("click", destroyDiv);
